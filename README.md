@@ -35,7 +35,6 @@ para adicionar dependência "base" do componente.
 Depois, extraí o ZIP, que baixei do site - **Online Builder** - do CKEditor, e adicionei, conforme descrito na [Documentação do CKEditor](https://bit.ly/3Ozzs7d), ao projeto, de forma que a pasta do CKEditor ficasse na Raiz do projeto:
 
 ```
-
 ├── ckeditor5
 │   ├── build
 │   ├── sample
@@ -48,17 +47,23 @@ Depois, extraí o ZIP, que baixei do site - **Online Builder** - do CKEditor, e 
 ├── src
 ├── ...
 └── package.json
-
 ```
 
 Então Rodei o comando:
+
 `yarn add file:./ckeditor`
+
 que referencia a pasta, como sendo a dependência, mas ainda assim precisei criar o arquivo:
+
 `typings.d.ts`
+
 para informar o caminho de declaração do módulo, na hora de importá-lo nas classes.
 
+
 Por fim rodei o comando:
+
 `yarn add @ckeditor/ckeditor5-build-classic`
+
 para adicionar as dependências que a pasta do CKEditor, utiliza.
 
 ---
@@ -68,16 +73,13 @@ para adicionar as dependências que a pasta do CKEditor, utiliza.
 Basicamente, importei as referências do CKEditor na classe App.tsx:
 
 ```
-
     import { CKEditor } from '@ckeditor/ckeditor5-react';
     import Editor from 'ckeditor5-custom-build';
-
 ```
 
 Criei uma variável, contendo as configurações do Componente:
 
 ```
-
     const editorConfig = {
     toolbar: {
       items: [
@@ -97,14 +99,12 @@ Criei uma variável, contendo as configurações do Componente:
         ...
         ]
       }
-    };  
-
+    };
 ```
 
 E por fim, instanciei o Componente dentro do App.tsx:
 
 ```
-
     function App() {
         const [addTexto, setaValor] = useState('');
         ...
@@ -135,7 +135,6 @@ E por fim, instanciei o Componente dentro do App.tsx:
     }
 
     export default App;
-    
 ```
 
 Confira a rotina completa no arquivo [App.tsx](/src/App.tsx).

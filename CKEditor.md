@@ -10,8 +10,6 @@ No **Online Builder**, selecionei a opção **_Classic_**, e depois fui selecion
 
 > Ao selecionar os componentes, preste atenção nos que possuem uma "★", pois estes são componentes "**Premium**".
 
----
-
 Depois organizei a interface, semelhante ao que seria a interface final, na própria ferramenta:
 
 ![CKEditor Online Builder](toolbar.png)
