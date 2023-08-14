@@ -5,9 +5,11 @@ Esse projeto, consite em uma aplicação de TESTE, para utilização do **CKEdit
 ## Para utilizar:
 
 Clone este repositório, e rode o comando:
+
 `yarn intall`
 
 Após, rode com:
+
 `yarn start`
 
 ---
@@ -25,12 +27,15 @@ O projeto foi "construído", utilizando:
 Após a criação do Build do CKEditor, e do Create React App, instalei as dependências necessárias para rodar o Componente.
 
 Rodei o comando:
+
 `yarn add @ckeditor/ckeditor5-react`
+
 para adicionar dependência "base" do componente.
 
 Depois, extraí o ZIP, que baixei do site - **Online Builder** - do CKEditor, e adicionei, conforme descrito na [Documentação do CKEditor](https://bit.ly/3Ozzs7d), ao projeto, de forma que a pasta do CKEditor ficasse na Raiz do projeto:
 
-``
+```
+
 ├── ckeditor5
 │   ├── build
 │   ├── sample
@@ -43,7 +48,8 @@ Depois, extraí o ZIP, que baixei do site - **Online Builder** - do CKEditor, e 
 ├── src
 ├── ...
 └── package.json
-``
+
+```
 
 Então Rodei o comando:
 `yarn add file:./ckeditor`
@@ -61,14 +67,17 @@ para adicionar as dependências que a pasta do CKEditor, utiliza.
 
 Basicamente, importei as referências do CKEditor na classe App.tsx:
 
-``
+```
+
     import { CKEditor } from '@ckeditor/ckeditor5-react';
     import Editor from 'ckeditor5-custom-build';
-``
+
+```
 
 Criei uma variável, contendo as configurações do Componente:
 
-``
+```
+
     const editorConfig = {
     toolbar: {
       items: [
@@ -88,12 +97,14 @@ Criei uma variável, contendo as configurações do Componente:
         ...
         ]
       }
-    };    
-``
+    };  
+
+```
 
 E por fim, instanciei o Componente dentro do App.tsx:
 
-``
+```
+
     function App() {
         const [addTexto, setaValor] = useState('');
         ...
@@ -124,7 +135,8 @@ E por fim, instanciei o Componente dentro do App.tsx:
     }
 
     export default App;
-``
+    
+```
 
 Confira a rotina completa no arquivo [App.tsx](/src/App.tsx).
 
